@@ -20,7 +20,11 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom>
         body{
-          background-color:#f0f0f0;
+          background-color:#ffffff;
+          position: relative;
+          margin: 0;
+          padding-bottom: 6rem;
+          min-height: 100vh;
         }
         .home-button {
           margin-top: 8px;
@@ -35,11 +39,107 @@
           align-items: left;
           background: #1a676b;
         }
+        .footerbar {
+          height: 80px;
+          position: absolute;
+          right: 0;
+          bottom: 220px;
+          left: 0;
+          padding: 1rem;
+          width: 100%;
+          display: flex;
+          background: #1a676b;
+          
+        }
+        .footerbar_bottom {
+          height: 220px;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding: 1rem;
+          width: 100%;
+          display: flex;
+          background: rgb(87, 105, 108);
+          
+        }
+
         .site-name {
           margin: 10px 0 0 60px;
         }
         article {
-          margin-top: 50px;
+          margin-top: 80px;
+
+        }
+        h1 {
+          text-align: center;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: 2em;
+          color: #1a676b;
+        }
+        h2{
+          text-align: center;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          font-weight: 100;
+          font-size: 1em;
+          margin-top: -20px;
+        }
+        .main_content{
+          display: flex;
+          justify-content: space-around;
+          margin: auto;
+        }
+        .question_card{
+          display: flex;
+          flex-flow: column;
+          margin: 50px;
+          box-shadow: 0px 0px 32px rgba(0,0,0,.1);
+          border-radius: 3px;
+          transition: all .3s ease;
+          width: 100%;
+          max-width: 600px;
+          min-width: 600px;
+          min-height: 300px;
+        }
+        .list_img{
+          min-width: 420px;
+          min-height: 400px;
+        }
+        .question{
+          font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          text-align: center;
+          margin: 50px 0;
+          font-weight: bolder;
+        }
+        .answer{
+          margin: 5px 100px;
+          height: 30px;
+          font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          box-shadow: 0px 2px 4px 2px rgba(0,0,0,.1);
+          font-weight: 500;
+        }
+        .answer:hover{
+          background-color: rgb(87, 163, 0);
+          color: white;
+          -webkit-transition: background-color .1s ease-out .1s, color .1s ease-out .1s;
+          transition: background-color .1s ease-out .1s, color .1s ease-out .1s;
+        }
+
+        .next{
+          margin: 15px 250px;
+          height: 40px;
+          font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          box-shadow: 0px 2px 4px 2px rgba(0,0,0,.1);
+          font-weight: 500;
+          background: #e97117;
+          color: white;
+        }
+
+        .next:hover{
+          background-color: #f3822c;
+          -webkit-transition: background-color .1s ease-out .1s;
+          transition: background-color .1s ease-out .1s;
+
         }
       </style>
 
@@ -54,6 +154,21 @@
       </amp-img>
       </a>
     </header>
-
+    <article>
+      <h1>Precalificate</h1>
+      <h2>Descubre tu monto de crédito en 3 minutos</h2>
+      <amp-layout class="main_content" layout="container">
+        <amp-layout class="question_card">
+          <div class="question">¿Ya tienes un inmueble identificado?</div>
+          <input class="answer" type="submit" value="Ya lo tengo">
+          <input class="answer" type="submit" value="Lo estoy buscando">
+          <input class="answer" type="submit" value="Estoy considerandolo">
+          <input class="next" type="submit" value="Siguiente">
+        </amp-layout>
+        <amp-img class="list_img" src="img/list.png" height="400px" width="420px" alt="list"></amp-img>
+      </amp-layout>
+    </article>
+    <footer class="footerbar"></footer>
+    <footer class="footerbar_bottom"></footer>
   </body>
 </html>
